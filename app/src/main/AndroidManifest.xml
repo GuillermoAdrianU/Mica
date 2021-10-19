@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MicaServices">
         <activity
+            android:name=".Registrar"
+            android:exported="true" />
+        <activity
             android:name=".P2Servicios"
             android:exported="true" />
         <activity
@@ -20,7 +23,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
