@@ -25,21 +25,8 @@ class MainActivity : AppCompatActivity() {
         configurarEventos()
     }
 
-    override fun onStart() {
-        super.onStart()
-        val usuario = mAuth.currentUser
-        if (usuario != null) {
-            println("INICIA: ${usuario?.displayName}")
-            println("Correo: ${usuario?.email}")
-            println("UID: ${usuario?.uid}")
-        }else{
-            println("Hacer SignIn")
-        }
-    }
-
     private fun configurarEventos(){
         binding.btnEntrar.setOnClickListener {
-
             val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
             startActivity(intEntrarServicios)
         }
@@ -49,8 +36,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnRegistrar.setOnClickListener(){
-            val intRegistrar = Intent(this, RegistrarActivity::class.java)
-            startActivity(intRegistrar)
+            val intenRegistrar = Intent(this, RegistrarActivity::class.java)
+            startActivity(intenRegistrar)
         }
     }
 
