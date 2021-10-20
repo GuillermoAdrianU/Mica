@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1453FA"
-    tools:context=".P2Servicios">
+    tools:context=".P2ServiciosActivity">
 
     <TextView
         android:id="@+id/textView"

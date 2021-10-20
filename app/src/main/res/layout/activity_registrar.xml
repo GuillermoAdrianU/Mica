@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C6D18C24"
-    tools:context=".Registrar">
+    tools:context=".RegistrarActivity">
 
     <Button
         android:id="@+id/btnEntrar"

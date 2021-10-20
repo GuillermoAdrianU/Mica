@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "774695959029",
+    "project_id": "micaservices-a7d33",
+    "storage_bucket": "micaservices-a7d33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774695959029:android:6a1a5550443dfc2e6248bc",
+        "android_client_info": {
+          "package_name": "mx.itesm.Team4.nombre_proyecto.MicaServices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774695959029-cogukk49prnt7gveq65qpmmut88nv49g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0LV7K0sKzuYNITm6vU76bILu42RkUqZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774695959029-cogukk49prnt7gveq65qpmmut88nv49g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

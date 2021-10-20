@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MicaServices">
         <activity
-            android:name=".Registrar"
+            android:name=".RegistrarActivity"
             android:exported="true" />
         <activity
-            android:name=".P2Servicios"
+            android:name=".P2ServiciosActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
