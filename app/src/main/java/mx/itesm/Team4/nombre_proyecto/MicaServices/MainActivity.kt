@@ -15,12 +15,13 @@ class MainActivity : AppCompatActivity() {
 
     private val CODIGO_SIGN_IN = 200
     private lateinit var baseDatos: FirebaseDatabase
-    private val mAuth = FirebaseAuth.getInstance()
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
+        mAuth = FirebaseAuth.getInstance()
         setContentView(view)
         configurarEventos()
     }
@@ -34,16 +35,28 @@ class MainActivity : AppCompatActivity() {
         binding.ibIngresarGoogle.setOnClickListener(){
             val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
             startActivity(intEntrarServicios)
-            autenticar()
+            autenticarGoogle()
         }
 
         binding.btnRegistrar.setOnClickListener(){
-            val intenRegistrar = Intent(this, RegistrarActivity::class.java)
-            startActivity(intenRegistrar)
+            val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
+            startActivity(intEntrarServicios)
+            autenticar()
         }
     }
 
     private fun autenticar() {
+        val providers = arrayListOf(AuthUI.IdpConfig.EmailBuilder().build())
+        startActivityForResult(
+            AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setAvailableProviders(providers)
+                .build(),
+            CODIGO_SIGN_IN
+        )
+    }
+
+    private fun autenticarGoogle() {
         val providers = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
         startActivityForResult(
             AuthUI.getInstance()
