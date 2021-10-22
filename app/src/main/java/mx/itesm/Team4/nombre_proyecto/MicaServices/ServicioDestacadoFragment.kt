@@ -13,7 +13,10 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
+
+
 class ServicioDestacadoFragment : ListFragment() {
+    private lateinit var binding: ServicioDestacadoFragment
     private var arrServiciosDestacados: MutableList<String> = mutableListOf()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,7 +33,7 @@ class ServicioDestacadoFragment : ListFragment() {
 
     private fun leerDatos() {
         val baseDatos = Firebase.database
-        val referencia = baseDatos.getReference("Alumnos")
+        val referencia = baseDatos.getReference("Servicios/serviciosDatos")
 
         //referencia.addListenerForSingleValueEvent(object: ValueEventListener{
         referencia.addValueEventListener(object: ValueEventListener {
@@ -38,7 +41,7 @@ class ServicioDestacadoFragment : ListFragment() {
                 arrServiciosDestacados.clear()
                 for (registro in snapshot.children){
                     val serDestacado = registro.getValue(ServicioDestacado::class.java)
-                    arrServiciosDestacados.add("${serDestacado?.nombreContacto}, ${serDestacado?.tipoServicio}, ${serDestacado?.telefono}")
+                    arrServiciosDestacados.add("${serDestacado?.Tipo}\n ${serDestacado?.Nombre}\n ${serDestacado?.Direccion}\n ${serDestacado?.Telefono}\n ${serDestacado?.correo}")
                 }
                 //adaptador
                 val adaptador = ArrayAdapter(requireContext(), R.layout.simple_list_item_1,
@@ -51,6 +54,26 @@ class ServicioDestacadoFragment : ListFragment() {
             }
 
         })
+    }
+
+    fun  buscarDatos(busqueda:String) {
+        arrServiciosDestacados.clear()
+
+        val baseDatos = Firebase.database
+        val referencia = baseDatos.getReference("Servicios/serviciosDatos/$busqueda")
+        val data = referencia.get()
+
+        data.addOnSuccessListener { snapshot ->
+            for (registro in snapshot.children){
+                val serDestacado = registro.getValue(ServicioDestacado::class.java)
+                arrServiciosDestacados.add("${serDestacado?.Tipo}\n ${serDestacado?.Nombre}\n ${serDestacado?.Direccion}\n ${serDestacado?.Telefono}\n ${serDestacado?.correo}")
+            }
+            //adaptador
+            val adaptador = ArrayAdapter(requireContext(), R.layout.simple_list_item_1,
+                arrServiciosDestacados)
+            listAdapter = adaptador
+        }
+
     }
 
 

@@ -13,7 +13,8 @@ class Pagar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPagarBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_pagar)
+        val view = binding.root
+        setContentView(view)
         configurarEventos()
     }
 

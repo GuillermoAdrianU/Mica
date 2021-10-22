@@ -14,7 +14,8 @@ class contactar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityContactarBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_contactar)
+        val view = binding.root
+        setContentView(view)
         configurarEventos()
     }
 

@@ -13,7 +13,8 @@ class Detallescuenta : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetallescuentaBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_detallescuenta)
+        val view = binding.root
+        setContentView(view)
         configurarEventos()
     }
 
