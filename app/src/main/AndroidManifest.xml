@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MicaServices">
         <activity
+            android:name=".Detallescuenta"
+            android:exported="true" />
+        <activity
+            android:name=".Pagar"
+            android:exported="true" />
+        <activity
+            android:name=".contactar"
+            android:exported="true" />
+        <activity
             android:name=".RegistrarActivity"
             android:exported="true" />
         <activity
