@@ -20,7 +20,7 @@ class P2ServiciosActivity : AppCompatActivity() {
     }
 
     private fun configurarEventos(){
-        binding.btnContinuar.setOnClickListener {
+        binding.btnContactar.setOnClickListener {
             val intEntrarServicios = Intent(this,contactar::class.java)
             startActivity(intEntrarServicios)
         }

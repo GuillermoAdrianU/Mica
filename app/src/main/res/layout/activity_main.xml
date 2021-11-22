@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8611C3"
-    android:backgroundTint="@color/purple_500"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnEntrar"
         android:layout_width="159dp"
         android:layout_height="55dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#0226F3"
         android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +35,7 @@
         android:id="@+id/textInputLayout"
         android:layout_width="248dp"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -51,10 +50,10 @@
         android:id="@+id/textInputLayout2"
         android:layout_width="246dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -66,15 +65,13 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="147dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Inicia Sesión con"
         app:layout_constraintBottom_toTopOf="@+id/ibIngresarGoogle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
 
     <ImageButton
         android:id="@+id/ibIngresarGoogle"
@@ -111,7 +108,7 @@
         android:id="@+id/btnRegistrar"
         android:layout_width="161dp"
         android:layout_height="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#0226F3"
         android:onClick="signIn"
         android:text="Registrar"

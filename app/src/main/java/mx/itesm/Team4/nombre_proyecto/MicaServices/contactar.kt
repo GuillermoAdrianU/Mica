@@ -21,7 +21,7 @@ class contactar : AppCompatActivity() {
 
     private fun configurarEventos(){
         binding.btncontinuar.setOnClickListener {
-            val intEntrarServicios = Intent(this,Detallescuenta::class.java)
+            val intEntrarServicios = Intent(this,Pagar::class.java)
             startActivity(intEntrarServicios)
         }
 

@@ -19,7 +19,7 @@ class Detallescuenta : AppCompatActivity() {
     }
 
 private fun configurarEventos(){
-    binding.btnContinuarPago.setOnClickListener {
+    binding.btnSalir.setOnClickListener {
         val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
         startActivity(intEntrarServicios)
         }

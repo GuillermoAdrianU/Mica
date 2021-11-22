@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8611C3"
-    android:backgroundTint="@color/purple_500"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/white"
     tools:context=".P2ServiciosActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -30,7 +30,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="#FFEB3B"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_search" />
@@ -44,7 +44,7 @@
         android:layout_marginEnd="16dp"
         android:text="Servicios"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,23 +58,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
         android:background="#8F58EF"
-        app:layout_constraintBottom_toTopOf="@+id/btnContinuar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/btnContinuar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="#62B9FF"
-        android:backgroundTint="@color/purple_700"
-        android:text="continuar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
