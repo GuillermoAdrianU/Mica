@@ -1,4 +1,4 @@
-package mx.itesm.Team4.nombre_proyecto.MicaServices
+package mx.itesm.Team4.nombre_proyecto.MicaServices.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

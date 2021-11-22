@@ -6,63 +6,67 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="@color/white"
-    tools:context=".P2ServiciosActivity">
+    tools:context=".views.P2ServiciosActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/buscarServicio"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Buscar Servicios" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_weight="15">
 
-    <ImageButton
-        android:id="@+id/btnBuscar"
-        android:layout_width="61dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Buscar" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="196dp"
-        android:layout_height="42dp"
+        android:id="@+id/Servicios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="Servicios"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="26sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buscarServicio" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.ServicioDestacadoFragment"
+        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ServiciosFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="30dp"
-        android:background="#8F58EF"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Servicios" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

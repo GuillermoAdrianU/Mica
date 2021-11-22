@@ -1,4 +1,4 @@
-package mx.itesm.Team4.nombre_proyecto.MicaServices
+package mx.itesm.Team4.nombre_proyecto.MicaServices.views
 
 import android.R
 import android.os.Bundle
@@ -15,8 +15,8 @@ import com.google.firebase.ktx.Firebase
 
 
 
-class ServicioDestacadoFragment : ListFragment() {
-    private lateinit var binding: ServicioDestacadoFragment
+class ServiciosFragment : ListFragment() {
+    private lateinit var binding: ServiciosFragment
     private var arrServiciosDestacados: MutableList<String> = mutableListOf()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,12 +35,12 @@ class ServicioDestacadoFragment : ListFragment() {
         val baseDatos = Firebase.database
         val referencia = baseDatos.getReference("Servicios/serviciosDatos")
 
-        //referencia.addListenerForSingleValueEvent(object: ValueEventListener{
-        referencia.addValueEventListener(object: ValueEventListener {
+        referencia.addListenerForSingleValueEvent(object: ValueEventListener{
+        //referencia.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 arrServiciosDestacados.clear()
                 for (registro in snapshot.children){
-                    val serDestacado = registro.getValue(ServicioDestacado::class.java)
+                    val serDestacado = registro.getValue(Servicio::class.java)
                     arrServiciosDestacados.add("${serDestacado?.Tipo}\n ${serDestacado?.Nombre}\n ${serDestacado?.Direccion}\n ${serDestacado?.Telefono}\n ${serDestacado?.correo}")
                 }
                 //adaptador
@@ -65,7 +65,7 @@ class ServicioDestacadoFragment : ListFragment() {
 
         data.addOnSuccessListener { snapshot ->
             for (registro in snapshot.children){
-                val serDestacado = registro.getValue(ServicioDestacado::class.java)
+                val serDestacado = registro.getValue(Servicio::class.java)
                 arrServiciosDestacados.add("${serDestacado?.Tipo}\n ${serDestacado?.Nombre}\n ${serDestacado?.Direccion}\n ${serDestacado?.Telefono}\n ${serDestacado?.correo}")
             }
             //adaptador

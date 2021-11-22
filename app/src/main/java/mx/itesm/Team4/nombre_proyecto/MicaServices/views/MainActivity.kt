@@ -1,4 +1,4 @@
-package mx.itesm.Team4.nombre_proyecto.MicaServices
+package mx.itesm.Team4.nombre_proyecto.MicaServices.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -29,18 +29,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun configurarEventos(){
         binding.btnEntrar.setOnClickListener {
-            val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
+            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
             startActivity(intEntrarServicios)
         }
 
         binding.ibIngresarGoogle.setOnClickListener(){
-            val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
+            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
             startActivity(intEntrarServicios)
             autenticarGoogle()
         }
 
         binding.btnRegistrar.setOnClickListener(){
-            val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
+            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
             startActivity(intEntrarServicios)
             autenticar()
         }

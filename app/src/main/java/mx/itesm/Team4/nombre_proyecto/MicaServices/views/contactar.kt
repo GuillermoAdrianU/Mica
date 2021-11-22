@@ -1,9 +1,8 @@
-package mx.itesm.Team4.nombre_proyecto.MicaServices
+package mx.itesm.Team4.nombre_proyecto.MicaServices.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.auth.FirebaseAuth
 import mx.itesm.Team4.nombre_proyecto.MicaServices.databinding.ActivityContactarBinding
 
 
@@ -21,7 +20,7 @@ class contactar : AppCompatActivity() {
 
     private fun configurarEventos(){
         binding.btncontinuar.setOnClickListener {
-            val intEntrarServicios = Intent(this,Pagar::class.java)
+            val intEntrarServicios = Intent(this, Pagar::class.java)
             startActivity(intEntrarServicios)
         }
 

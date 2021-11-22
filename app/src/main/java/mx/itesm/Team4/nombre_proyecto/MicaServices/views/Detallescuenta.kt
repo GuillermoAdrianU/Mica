@@ -1,4 +1,4 @@
-package mx.itesm.Team4.nombre_proyecto.MicaServices
+package mx.itesm.Team4.nombre_proyecto.MicaServices.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +20,7 @@ class Detallescuenta : AppCompatActivity() {
 
 private fun configurarEventos(){
     binding.btnSalir.setOnClickListener {
-        val intEntrarServicios = Intent(this,P2ServiciosActivity::class.java)
+        val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
         startActivity(intEntrarServicios)
         }
     }

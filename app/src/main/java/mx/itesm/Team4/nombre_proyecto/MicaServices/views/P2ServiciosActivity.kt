@@ -1,4 +1,4 @@
-package mx.itesm.Team4.nombre_proyecto.MicaServices
+package mx.itesm.Team4.nombre_proyecto.MicaServices.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,7 @@ import mx.itesm.Team4.nombre_proyecto.MicaServices.databinding.ActivityP2Servici
 class P2ServiciosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityP2ServiciosBinding
-    private lateinit var fragmentoServicios: ServicioDestacadoFragment
+    private lateinit var fragmentoServicios: ServiciosFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +20,6 @@ class P2ServiciosActivity : AppCompatActivity() {
     }
 
     private fun configurarEventos(){
-        binding.btnContactar.setOnClickListener {
-            val intEntrarServicios = Intent(this,contactar::class.java)
-            startActivity(intEntrarServicios)
-        }
-
-        binding.btnBuscar.setOnClickListener {
-            fragmentoServicios.buscarDatos(binding.buscarServicio.toString())
-        }
 
     }
 
