@@ -34,8 +34,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.ibIngresarGoogle.setOnClickListener(){
-            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
-            startActivity(intEntrarServicios)
             autenticarGoogle()
         }
 
@@ -83,6 +81,9 @@ class MainActivity : AppCompatActivity() {
                     println("Correo: ${usuario?.email}")
                     println("UID: ${usuario?.uid}")
                     // Lanzar otra actividad
+                    val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
+                    startActivity(intEntrarServicios)
+
                 }
                 RESULT_CANCELED -> {
                     println("Cancelado...")

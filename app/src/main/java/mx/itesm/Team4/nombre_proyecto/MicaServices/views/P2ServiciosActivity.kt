@@ -9,18 +9,13 @@ import mx.itesm.Team4.nombre_proyecto.MicaServices.databinding.ActivityP2Servici
 class P2ServiciosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityP2ServiciosBinding
-    private lateinit var fragmentoServicios: ServiciosFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityP2ServiciosBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        configurarEventos()
     }
 
-    private fun configurarEventos(){
-
-    }
 
 }

@@ -57,7 +57,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ServiciosFragment"
+        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ListaServiciosFrag"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"

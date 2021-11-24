@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listaServiciosFrag">
+
+    <fragment
+        android:id="@+id/listaServiciosFrag"
+        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ListaServiciosFrag"
+        android:label="lista_servicios_fragment"
+        tools:layout="@layout/lista_servicios_fragment" >
+        <action
+            android:id="@+id/action_listaServiciosFrag_to_servicioFrag"
+            app:destination="@id/servicioFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicioFrag"
+        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ServicioFrag"
+        android:label="servicio_fragment"
+        tools:layout="@layout/servicio_fragment" >
+        <argument
+            android:name="servicio_seleccionado"
+            app:argType="mx.itesm.Team4.nombre_proyecto.MicaServices.models.Servicio" />
+    </fragment>
+</navigation>
