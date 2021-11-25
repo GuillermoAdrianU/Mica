@@ -70,7 +70,7 @@ class AdaptadorListaServicios(var arrServicios: ArrayList<Servicio> ) :
             tvNombreServicio.text = servicio.Fields.Nombre.stringValue
             Glide
                 .with(itemView)
-                .load(servicio.Fields.imagen)
+                .load(servicio.Fields.imagen.stringValue)
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(ivImagenServicio)
         }

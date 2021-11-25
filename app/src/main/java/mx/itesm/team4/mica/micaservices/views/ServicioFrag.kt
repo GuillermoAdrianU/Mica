@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
+import mx.itesm.team4.mica.micaservices.R
 import mx.itesm.team4.mica.micaservices.databinding.ServicioFragmentBinding
 import mx.itesm.team4.mica.micaservices.viewmodels.ServicioVM
 
@@ -39,6 +41,11 @@ class ServicioFrag : Fragment() {
         binding.tvTelefonoCon.text = args.servicioSelecionado.Fields.Telefono.stringValue
         binding.tvCostoCon.text = args.servicioSelecionado.Fields.Costo.stringValue
         binding.tvDireccionCon.text = args.servicioSelecionado.Fields.Direccion.stringValue
+        Glide
+            .with(this)
+            .load(args.servicioSelecionado.Fields.imagen.stringValue)
+            .placeholder(R.drawable.ic_launcher_background)
+            .into(binding.imageView8)
 
         configurarEventos()
         configurarObservadores()
