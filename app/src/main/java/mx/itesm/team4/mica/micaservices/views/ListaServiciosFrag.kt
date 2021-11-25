@@ -63,7 +63,7 @@ class ListaServiciosFrag : Fragment(), RenglonListener {
 
     override fun clickRenglon(position: Int) {
         val servicioSeleccionado = adaptadorListaServicios.arrServicios[position]
-        val action = ListaServiciosFragDirections.actionListaServiciosFragToServicioFrag(servicioSeleccionado)
+        val action = ListaServiciosFragDirections.actionListaServiciosFragToContactar(servicioSeleccionado)
         findNavController().navigate(action)
     }
 

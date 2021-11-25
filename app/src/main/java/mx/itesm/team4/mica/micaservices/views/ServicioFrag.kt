@@ -21,7 +21,7 @@ class ServicioFrag : Fragment() {
 
     private val viewModel: ServicioVM by viewModels()
     private lateinit var binding  : ServicioFragmentBinding
-    private val args : ServicioFragArgs by navArgs()
+    //private val args : ServicioFragArgs by navArgs()
 
 
 
@@ -33,7 +33,7 @@ class ServicioFrag : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.tvNombreCon.text = args.servicioSelecionado.Fields.Direccion.stringValue
@@ -61,6 +61,6 @@ class ServicioFrag : Fragment() {
             findNavController().navigate(action)
         }
 
-    }
+    }*/
 
 }

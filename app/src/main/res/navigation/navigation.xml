@@ -6,29 +6,21 @@
     app:startDestination="@id/listaServiciosFrag">
 
     <fragment
-        android:id="@+id/servicioFrag"
-        android:name="mx.itesm.team4.mica.micaservices.views.ServicioFrag"
-        android:label="servicio_fragment"
-        tools:layout="@layout/servicio_fragment" >
-        <action
-            android:id="@+id/action_servicioFrag_to_pagar"
-            app:destination="@id/pagar" />
-        <argument
-            android:name="servicioSelecionado"
-            app:argType="mx.itesm.team4.mica.micaservices.models.Servicio" />
-    </fragment>
-    <fragment
         android:id="@+id/listaServiciosFrag"
         android:name="mx.itesm.team4.mica.micaservices.views.ListaServiciosFrag"
         android:label="lista_servicios_fragment"
         tools:layout="@layout/lista_servicios_fragment" >
         <action
-            android:id="@+id/action_listaServiciosFrag_to_servicioFrag"
-            app:destination="@id/servicioFrag" />
+            android:id="@+id/action_listaServiciosFrag_to_contactar"
+            app:destination="@id/contactar" />
     </fragment>
     <activity
-        android:id="@+id/pagar"
-        android:name="mx.itesm.team4.mica.micaservices.views.Pagar"
-        android:label="activity_pagar"
-        tools:layout="@layout/activity_pagar" />
+        android:id="@+id/contactar"
+        android:name="mx.itesm.team4.mica.micaservices.views.contactar"
+        android:label="activity_contactar"
+        tools:layout="@layout/activity_contactar" >
+        <argument
+            android:name="servicioSelecionado"
+            app:argType="mx.itesm.team4.mica.micaservices.models.Servicio" />
+    </activity>
 </navigation>
