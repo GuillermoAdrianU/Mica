@@ -1,11 +1,28 @@
 package mx.itesm.Team4.nombre_proyecto.MicaServices.models
 
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class Servicio (var Direccion:String = "",
-                     var Nombre:String = "",
-                     var Telefono:String = "",
-                     var Tipo:String = "",
-                     var Costo:String = "",
-                     var correo:String = "",
-                     var imagen:String = ""): Serializable
+data class Servicio (
+    @SerializedName("name")
+    var Name:String = "",
+    @SerializedName("fields")
+    var Fields: ServicioFields = ServicioFields(Values(""),Values(""),Values(""),Values(""),Values(""),Values(""),Values(""),)
+    ): Serializable
+
+/*
+    @SerializedName("Direccion")
+    var Direccion:String = "",
+    @SerializedName("Nombre")
+    var Nombre:String = "",
+    @SerializedName("Telefono")
+    var Telefono:String = "",
+    @SerializedName("Tipo")
+    var Tipo:String = "",
+    @SerializedName("Costo")
+    var Costo:String = "",
+    @SerializedName("Correo")
+    var correo:String = "",
+    @SerializedName("Imagen")
+    var imagen:String = ""): Serializable
+*/

@@ -29,8 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun configurarEventos(){
         binding.btnEntrar.setOnClickListener {
-            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
-            startActivity(intEntrarServicios)
+            autenticarGoogle()
         }
 
         binding.ibIngresarGoogle.setOnClickListener(){
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnRegistrar.setOnClickListener(){
             val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
             startActivity(intEntrarServicios)
-            autenticar()
+            //autenticar()
         }
     }
 
@@ -81,6 +80,8 @@ class MainActivity : AppCompatActivity() {
                     println("Correo: ${usuario?.email}")
                     println("UID: ${usuario?.uid}")
                     // Lanzar otra actividad
+                    //val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
+                    //startActivity(intEntrarServicios)
                     val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
                     startActivity(intEntrarServicios)
 

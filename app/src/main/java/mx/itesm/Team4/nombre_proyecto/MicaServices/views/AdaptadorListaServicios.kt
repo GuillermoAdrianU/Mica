@@ -67,10 +67,10 @@ class AdaptadorListaServicios(var arrServicios: ArrayList<Servicio> ) :
 
         //con esta función se vana poblar los datos de cada una de las cajas(renglones)del recicler view
         fun set(servicio: Servicio){
-            tvNombreServicio.text = servicio.Nombre
+            tvNombreServicio.text = servicio.Fields.Nombre.stringValue
             Glide
                 .with(itemView)
-                .load(servicio.imagen)
+                .load(servicio.Fields.imagen)
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(ivImagenServicio)
         }
