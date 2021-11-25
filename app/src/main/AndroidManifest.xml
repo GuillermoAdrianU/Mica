@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.itesm.team4.mica.micaservices">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -8,7 +9,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MicaServices">
+        android:theme="@style/Theme.MicaServices"
+        android:name="mx.itesm.team4.mica.micaservices.views.PaypalServicio">
         <activity
             android:name="mx.itesm.team4.mica.micaservices.views.Detallescuenta"
             android:exported="true" />
@@ -17,9 +19,6 @@
             android:exported="true" />
         <activity
             android:name="mx.itesm.team4.mica.micaservices.views.contactar"
-            android:exported="true" />
-        <activity
-            android:name=".RegistrarActivity"
             android:exported="true" />
         <activity
             android:name="mx.itesm.team4.mica.micaservices.views.P2ServiciosActivity"
