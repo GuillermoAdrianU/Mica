@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mx.itesm.Team4.nombre_proyecto.MicaServices">
+    package="mx.itesm.team4.mica.micaservices">
 
     <application
         android:allowBackup="true"
@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MicaServices">
         <activity
-            android:name=".views.Detallescuenta"
+            android:name="mx.itesm.team4.mica.micaservices.views.Detallescuenta"
             android:exported="true" />
         <activity
-            android:name=".views.Pagar"
+            android:name="mx.itesm.team4.mica.micaservices.views.Pagar"
             android:exported="true" />
         <activity
-            android:name=".views.contactar"
+            android:name="mx.itesm.team4.mica.micaservices.views.contactar"
             android:exported="true" />
         <activity
             android:name=".RegistrarActivity"
             android:exported="true" />
         <activity
-            android:name=".views.P2ServiciosActivity"
+            android:name="mx.itesm.team4.mica.micaservices.views.P2ServiciosActivity"
             android:exported="true" />
         <activity
-            android:name=".views.MainActivity"
+            android:name="mx.itesm.team4.mica.micaservices.views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/servicioFrag"
-        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ServicioFrag"
+        android:name="mx.itesm.team4.mica.micaservices.views.ServicioFrag"
         android:label="servicio_fragment"
         tools:layout="@layout/servicio_fragment" >
         <argument
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/listaServiciosFrag"
-        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.ListaServiciosFrag"
+        android:name="mx.itesm.team4.mica.micaservices.views.ListaServiciosFrag"
         android:label="lista_servicios_fragment"
         tools:layout="@layout/lista_servicios_fragment" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <activity
         android:id="@+id/pagar"
-        android:name="mx.itesm.Team4.nombre_proyecto.MicaServices.views.Pagar"
+        android:name="mx.itesm.team4.mica.micaservices.views.Pagar"
         android:label="activity_pagar"
         tools:layout="@layout/activity_pagar" />
 </navigation>
