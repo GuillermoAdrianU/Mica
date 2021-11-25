@@ -10,12 +10,12 @@
         android:name="mx.itesm.team4.mica.micaservices.views.ServicioFrag"
         android:label="servicio_fragment"
         tools:layout="@layout/servicio_fragment" >
-        <argument
-            android:name="servicioSeleccionado"
-            app:argType="mx.itesm.Team4.nombre_proyecto.MicaServices.models.Servicio" />
         <action
             android:id="@+id/action_servicioFrag_to_pagar"
             app:destination="@id/pagar" />
+        <argument
+            android:name="servicioSelecionado"
+            app:argType="mx.itesm.team4.mica.micaservices.models.Servicio" />
     </fragment>
     <fragment
         android:id="@+id/listaServiciosFrag"
@@ -23,7 +23,7 @@
         android:label="lista_servicios_fragment"
         tools:layout="@layout/lista_servicios_fragment" >
         <action
-            android:id="@+id/action_listaServiciosFrag_to_servicioFrag2"
+            android:id="@+id/action_listaServiciosFrag_to_servicioFrag"
             app:destination="@id/servicioFrag" />
     </fragment>
     <activity

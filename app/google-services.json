@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "774695959029",
+    "firebase_url": "https://micaservices-a7d33-default-rtdb.firebaseio.com",
     "project_id": "micaservices-a7d33",
     "storage_bucket": "micaservices-a7d33.appspot.com"
   },
@@ -10,6 +11,43 @@
         "mobilesdk_app_id": "1:774695959029:android:6a1a5550443dfc2e6248bc",
         "android_client_info": {
           "package_name": "mx.itesm.Team4.nombre_proyecto.MicaServices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774695959029-5iq83fh99ft71i0i7i7l93nipb21176n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.itesm.Team4.nombre_proyecto.MicaServices",
+            "certificate_hash": "0eedcd23f4742c03b0be8a6e8905e8df351145c8"
+          }
+        },
+        {
+          "client_id": "774695959029-cogukk49prnt7gveq65qpmmut88nv49g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0LV7K0sKzuYNITm6vU76bILu42RkUqZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774695959029-cogukk49prnt7gveq65qpmmut88nv49g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774695959029:android:da8e3b23ffbd3b9a6248bc",
+        "android_client_info": {
+          "package_name": "mx.itesm.team4.mica.micaservices"
         }
       },
       "oauth_client": [

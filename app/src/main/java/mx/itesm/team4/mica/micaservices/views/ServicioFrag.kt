@@ -34,11 +34,11 @@ class ServicioFrag : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvNombreCon.text = args.servicioSeleccionado.Fields.Direccion.stringValue
-        binding.tvTipoCon.text = args.servicioSeleccionado.Fields.Tipo.stringValue
-        binding.tvTelefonoCon.text = args.servicioSeleccionado.Fields.Telefono.stringValue
-        binding.tvCostoCon.text = args.servicioSeleccionado.Fields.Costo.stringValue
-        binding.tvDireccionCon.text = args.servicioSeleccionado.Fields.Direccion.stringValue
+        binding.tvNombreCon.text = args.servicioSelecionado.Fields.Direccion.stringValue
+        binding.tvTipoCon.text = args.servicioSelecionado.Fields.Tipo.stringValue
+        binding.tvTelefonoCon.text = args.servicioSelecionado.Fields.Telefono.stringValue
+        binding.tvCostoCon.text = args.servicioSelecionado.Fields.Costo.stringValue
+        binding.tvDireccionCon.text = args.servicioSelecionado.Fields.Direccion.stringValue
 
         configurarEventos()
         configurarObservadores()
