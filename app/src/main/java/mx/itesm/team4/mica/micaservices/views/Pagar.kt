@@ -43,7 +43,7 @@ class Pagar : AppCompatActivity() {
                     purchaseUnitList = listOf(
                         PurchaseUnit(
                             amount = Amount(
-                                currencyCode = CurrencyCode.USD,
+                                currencyCode = CurrencyCode.MXN,
                                 value = "10.00"
                             )
                         )
@@ -57,5 +57,14 @@ class Pagar : AppCompatActivity() {
                 }
             }
         )
+
+        configurarObservadores()
+    }
+
+    private fun configurarObservadores() {
+        binding.continuar.setOnClickListener {
+            val intentSucces = Intent(this, Detallescuenta::class.java)
+            startActivity(intentSucces)
+        }
     }
 }
