@@ -26,6 +26,7 @@
             android:layout_weight="15">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Buscar" />

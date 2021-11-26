@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
@@ -29,7 +30,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun configurarEventos(){
         binding.btnEntrar.setOnClickListener {
-            autenticarGoogle()
+            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
+            if(binding.etCorre.text?.isNotBlank() == true) {
+                FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(
+                        binding.etCorre.text.toString(),
+                        binding.etContrase.text.toString()
+                    ).addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            startActivity(intEntrarServicios)
+                        } else {
+                            showAlert()
+                        }
+                    }
+            }else{
+                showAlert()
+            }
+
+
+
         }
 
         binding.ibIngresarGoogle.setOnClickListener(){
@@ -37,9 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnRegistrar.setOnClickListener(){
-            val intEntrarServicios = Intent(this, P2ServiciosActivity::class.java)
-            startActivity(intEntrarServicios)
-            //autenticar()
+            autenticar()
         }
     }
 
@@ -111,5 +128,18 @@ class MainActivity : AppCompatActivity() {
         }else{
             println("Hacer Login......")
         }
+    }
+
+
+    private fun showAlert(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("Se ha producido un error al autenticar al usuario")
+        builder.setPositiveButton("Aceptar", null)
+
+        val dialog = builder.create()
+        dialog.show()
+
+
     }
 }

@@ -12,4 +12,5 @@ interface api {
 
     @GET("projects/micaservices-a7d33/databases/(default)/documents/Servicios")
     fun descargarListaServicios() : Call<ResponseJSON>
+
 }

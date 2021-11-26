@@ -58,6 +58,7 @@ class AdaptadorListaServicios(var arrServicios: ArrayList<Servicio> ) :
 
 
 
+
     class ServicioHolder(view: View): RecyclerView.ViewHolder(view) {
         //Nombre pais
         private val tvNombreServicio = view.findViewById<TextView>(R.id.tvNombreServicioRV)  //Todos los ID son "R.id"
