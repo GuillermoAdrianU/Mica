@@ -1,11 +1,14 @@
 package mx.itesm.team4.mica.micaservices.views
 
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import mx.itesm.team4.mica.micaservices.R
@@ -81,4 +84,5 @@ class AdaptadorListaServicios(var arrServicios: ArrayList<Servicio> ) :
 
 
 }
+
 
