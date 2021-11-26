@@ -19,6 +19,9 @@ class ListaServiciosVM : ViewModel() {
     //Variables observables
     val arrayServicios = MutableLiveData<List<Servicio>>()
 
+    val searchText = MutableLiveData<String>("")
+
+    lateinit var arrServiciosTotales : List<Servicio>
 
     //Retrofit
     private val retrofit by lazy {
@@ -46,6 +49,7 @@ class ListaServiciosVM : ViewModel() {
             override fun onResponse(call: Call<ResponseJSON>, response: Response<ResponseJSON>) {
                 print("Servicio: ${response.body()}")
                 arrayServicios.value = response.body()?.documents
+                arrServiciosTotales = response.body()?.documents!!
             }
 
             override fun onFailure(call: Call<ResponseJSON>, t: Throwable) {

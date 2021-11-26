@@ -46,7 +46,8 @@ class contactar : AppCompatActivity() {
     private fun configurarEventos(){
         binding.btncontinuar.setOnClickListener {
             val intEntrarServicios = Intent(this, Pagar::class.java)
-            //intEntrarServicios.putExtra()
+            intEntrarServicios.putExtra("Nombre", args.servicioSelecionado.Fields.Nombre.stringValue)
+            intEntrarServicios.putExtra("Costo", args.servicioSelecionado.Fields.Costo.stringValue)
             startActivity(intEntrarServicios)
         }
 

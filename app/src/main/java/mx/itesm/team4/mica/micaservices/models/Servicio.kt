@@ -7,7 +7,7 @@ data class Servicio (
     @SerializedName("name")
     var Name:String = "",
     @SerializedName("fields")
-    var Fields: ServicioFields = ServicioFields(Values(""),Values(""),Values(""),Values(""),Values(""),Values(""),Values(""),)
+    var Fields: ServicioFields = ServicioFields(Values(""),Values(""),Values(""),Values(""),Values(""),Values(""),Values(""))
     ): Serializable
 
 /*

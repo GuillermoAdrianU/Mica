@@ -25,10 +25,13 @@ import java.math.BigDecimal
 
 class Pagar : AppCompatActivity() {
     private lateinit var binding: ActivityPagarBinding
+    lateinit var objetoIntent :Intent
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        objetoIntent = intent
         binding = ActivityPagarBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -64,6 +67,8 @@ class Pagar : AppCompatActivity() {
     private fun configurarObservadores() {
         binding.continuar.setOnClickListener {
             val intentSucces = Intent(this, Detallescuenta::class.java)
+            intentSucces.putExtra("Nombre" , objetoIntent.getStringExtra("Nombre"))
+            intentSucces.putExtra("Costo" , objetoIntent.getStringExtra("Costo"))
             startActivity(intentSucces)
         }
     }

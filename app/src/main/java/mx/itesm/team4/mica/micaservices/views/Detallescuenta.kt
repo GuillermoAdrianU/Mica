@@ -6,18 +6,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import mx.itesm.team4.mica.micaservices.databinding.ActivityDetallescuentaBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class Detallescuenta : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetallescuentaBinding
+    lateinit var objetoIntent : Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetallescuentaBinding.inflate(layoutInflater)
         val view = binding.root
+        objetoIntent = intent
+        llenarDatos()
         setContentView(view)
         configurarEventos()
+    }
+
+    private fun llenarDatos() {
+        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+        val currentDate = sdf.format(Date())
+        binding.tvMonto.text = objetoIntent.getStringExtra("Costo")
+        binding.tvServicio.text = objetoIntent.getStringExtra("Nombre")
+        binding.tvFecha.text = currentDate.toString()
     }
 
     private fun configurarEventos() {

@@ -23,29 +23,6 @@ class P2ServiciosActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        configurarObservadores()
-    }
-
-
-    private fun configurarObservadores() {
-        binding.imageButton.setOnClickListener {
-            //viewModelLista.arrayServicios.value = filtrarDatos(viewModelLista.arrayServicios.value)
-        }
-    }
-
-    private fun filtrarDatos(arraServicios: List<Servicio>?): List<Servicio>? {
-        val nuevaLista = ArrayList<Servicio>(arraServicios)
-        arraServicios?.forEach { servicio ->
-            if (servicio.Fields.Nombre.stringValue == binding.searchText.toString()) {
-                nuevaLista.add(servicio)
-            } else if (servicio.Fields.Tipo.stringValue == binding.searchText.toString()) {
-                nuevaLista.add(servicio)
-            } else {
-                print(servicio.Fields.Nombre.stringValue)
-            }
-        }
-
-        return  nuevaLista
     }
 
 }
