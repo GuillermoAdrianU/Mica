@@ -26,12 +26,19 @@ import java.math.BigDecimal
 class Pagar : AppCompatActivity() {
     private lateinit var binding: ActivityPagarBinding
     lateinit var objetoIntent :Intent
+    var montoEntero :Int = 0
 
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         objetoIntent = intent
+        var montoString = objetoIntent.getStringExtra("Costo")
+        val endString = montoString?.length?.minus(4)
+        montoString = montoString?.slice(IntRange(0, endString!!))
+
+        print(montoString)
+
         binding = ActivityPagarBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)

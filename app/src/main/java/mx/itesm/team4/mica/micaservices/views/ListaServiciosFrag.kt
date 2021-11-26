@@ -59,6 +59,7 @@ class ListaServiciosFrag : Fragment(), RenglonListener {
     private fun registrarObservadores() {
         viewModel.arrayServicios.observe(viewLifecycleOwner){lista ->
             adaptadorListaServicios.actualizarDatos(lista)
+            binding.progressBar2.visibility = View.GONE
         }
 
         /*binding.searchText.addTextChangedListener(object : TextWatcher{

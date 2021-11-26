@@ -28,6 +28,8 @@ class contactar : AppCompatActivity() {
     }
 
     private fun llenarDatos() {
+        val value = args.servicioSelecionado.Fields.Costo.stringValue
+        println(value.slice(IntRange(0,-4)))
         binding.tvNombre.text = args.servicioSelecionado.Fields.Nombre.stringValue
         binding.tvCosto.text = args.servicioSelecionado.Fields.Costo.stringValue
         binding.tvDireccion.text = args.servicioSelecionado.Fields.Direccion.stringValue
